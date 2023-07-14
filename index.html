@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 5px;
+background-color: blueviolet;
+display: flex;
+flex-direction: column;
+align-items: center;
+row-gap: 15px;
+">
+
+<H1>Backend Assignment</H1>
+
+    <form  style="padding: 10px;
+    background-color: rgb(225, 215, 235);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    "
+     action="/insert" method="post" class="container">
+        <H2>Add Products</H2>
+        <input name="pname" type="text" placeholder="products">
+        <button
+        style="background-color: rgb(207, 233, 167);
+        border-radius: 20px;
+        cursor: pointer;"
+         type="submit">submit</button>
+    </form>
+
+    
+    <form 
+    style="padding: 10px;
+    background-color: rgb(225, 215, 235);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    "
+    action="/update" method="post" class="container">
+    <h2>Update Products</h2>
+        <input name="pid" type="text" placeholder="Enter id">
+        <input name="pname" type="text" placeholder="update item">
+        <button
+        style="background-color: rgb(207, 233, 167);
+        border-radius: 20px;
+        cursor: pointer;"
+         type="submit">update</button>
+    </form>
+
+    
+    <form
+    style="padding: 10px;
+    background-color: rgb(225, 215, 235);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    "
+    action="/delete" method="post" class="container">
+    <h2>Delete Products</H2>
+        <input name="pid" type="text" placeholder="Enter id">
+        <button
+        style="background-color: rgb(207, 233, 167);
+        border-radius: 20px;
+        cursor: pointer;"
+         id="del" type="submit">delete</button>
+    </form>
+</body>
+</html>
