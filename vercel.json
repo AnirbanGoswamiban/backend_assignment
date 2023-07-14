@@ -1,5 +1,6 @@
 {
     "version":2,
+    "name":"backend_assignment",
     "builds":[
         {
             "src":"./index.js",
