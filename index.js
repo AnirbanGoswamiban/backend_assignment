@@ -3,7 +3,7 @@ const app=express()
 const bodyparser=require("body-parser")
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(express.json())
-const port = process.env.PORT || 3000;
+const port = 3000
 let count=3
 //products
 let products=[
