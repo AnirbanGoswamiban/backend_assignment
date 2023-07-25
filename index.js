@@ -4,26 +4,9 @@ const bodyparser=require("body-parser")
 app.use(bodyparser.urlencoded({extended:true}))
 app.use(express.json())
 const port = 3000
-let count=3
+let count=0
 //products
-let products=[
-    {
-        id:0,
-        name:"intel processor"
-    },
-      {
-        id:1,
-        name:"amd processor"
-    },
-     {
-        id:2,
-        name:"graphics card"
-    },
-      {
-        id:3,
-        name:"8gb ram"
-    }
-]
+let products=[]
 
 
 
@@ -43,11 +26,11 @@ app.get('/home', (req, res) => {
 //post
 app.post("/insert",(req,res)=>{
   let product={}
-  count++;
   product["id"]=count;
   product["name"]=req.body.pname;
   console.log(product);
   products.push(product)
+  count++;
   res.redirect("/home")
 })
 
@@ -75,6 +58,7 @@ app.post("/delete", (req, res) => {
     products.pop(e)
    }
   })
+  count--;
   res.redirect("/home") 
 })
 
